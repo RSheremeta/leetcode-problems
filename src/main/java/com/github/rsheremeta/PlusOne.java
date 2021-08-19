@@ -23,30 +23,10 @@ public class PlusOne {
   static int[] array1 = {1, 2, 3};
   static int[] array2 = {4, 3, 2, 1};
   static int[] array3 = {0};
-  static int[] array4 = {9, 8, 7, 6, 5, 4, 3, 2, 1, 9};
+  static int[] array4 = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
 
   public static void main(String[] args) {
-    System.out.println(Arrays.toString(plusOne(array4)));
-  }
-
-  // doesn't work with big arrays
-  public static int[] my(int[] digits) {
-    List<Integer> nums = Arrays.stream(digits).boxed().collect(Collectors.toList());
-
-    String numWord = "";
-    for (Integer numItem: nums) {
-      numWord += numItem;
-    }
-    numWord = Integer.parseInt(numWord) + 1 + "";
-
-    String[] tempResults = numWord.split("");
-    int[] results = new int[tempResults.length];
-
-    for (int i = 0; i < tempResults.length; i++) {
-      results[i] = Integer.parseInt(tempResults[i]);
-    }
-
-    return results;
+    System.out.println(Arrays.toString(plusOne(array1)));
   }
 
   public static int[] plusOne(int[] digits) {
